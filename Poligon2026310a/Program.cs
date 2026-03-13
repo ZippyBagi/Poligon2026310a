@@ -12,6 +12,7 @@ namespace Poligon2026310a
         {
             //Dusan Kovacevic
             Console.WriteLine("Test");
+            Console.WriteLine("Test2");
         }
     }
 }
