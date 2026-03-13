@@ -1,0 +1,43 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Poligon2026310a
+{
+    internal class Vektor
+    {
+        Tacka pocetak;
+        Tacka kraj;
+
+        public Vektor(Tacka pocetak, Tacka kraj)
+        {
+            this.pocetak = pocetak;
+            this.kraj = kraj;
+        }
+    
+        public Vektor(Tacka A)
+        {
+            pocetak = new Tacka();
+            kraj = A;
+        }
+
+        public Tacka Centriraj()
+        {
+            Tacka centar = new Tacka(kraj.x - pocetak.x, kraj.y - pocetak.y);
+
+            return centar;
+        }
+
+        public double SkalarniProizbod(Vektor prvi, Vektor drugi)
+        {
+            Tacka a = prvi.Centriraj();
+            Tacka b = drugi.Centriraj();
+
+            return a.x * b.x + a.y * b.y;
+        }
+
+    }
+
+}

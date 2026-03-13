@@ -11,8 +11,12 @@ namespace Poligon2026310a
         static void Main(string[] args)
         {
             //Dusan Kovacevic
-            Console.WriteLine("Test");
-            Console.WriteLine("Test2");
+            Tacka a = new Tacka(-1,-1);
+
+            Console.WriteLine(a.ugao());
+
+            Console.WriteLine(a.d());
+            
         }
     }
 }
