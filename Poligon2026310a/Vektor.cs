@@ -30,7 +30,7 @@ namespace Poligon2026310a
             return centar;
         }
 
-        public double SkalarniProizbod(Vektor prvi, Vektor drugi)
+        public static double SkalarniProizbod(Vektor prvi, Vektor drugi)
         {
             Tacka a = prvi.Centriraj();
             Tacka b = drugi.Centriraj();
@@ -38,7 +38,7 @@ namespace Poligon2026310a
             return a.x * b.x + a.y * b.y;
         }
         
-        public double VektorskiProizvod(Vektor prvi, Vektor drugi)
+        public static double VektorskiProizvod(Vektor prvi, Vektor drugi)
         {
             Tacka a = prvi.Centriraj();
             Tacka b = drugi.Centriraj();

@@ -16,7 +16,18 @@ namespace Poligon2026310a
             Console.WriteLine(a.ugao());
 
             Console.WriteLine(a.d());
-            
+
+            Tacka A = new Tacka(3,1);
+            Tacka B = new Tacka(-1,3);
+            Tacka C = new Tacka(3,3);
+
+            Vektor OA = new Vektor(A);
+            Vektor AC = new Vektor(A, C);
+            Vektor OB = new Vektor(B);
+
+            Console.WriteLine(Vektor.SkalarniProizbod(OA,OB));
+
+            Console.WriteLine(Vektor.VektorskiProizvod(OA, AC));
         }
     }
 }
