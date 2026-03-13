@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ravna.cs" />
     <Compile Include="Tacka.cs" />
     <Compile Include="Vektor.cs" />
   </ItemGroup>

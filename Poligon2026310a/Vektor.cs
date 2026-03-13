@@ -8,8 +8,8 @@ namespace Poligon2026310a
 {
     internal class Vektor
     {
-        Tacka pocetak;
-        Tacka kraj;
+        public Tacka pocetak;
+        public Tacka kraj;
 
         public Vektor(Tacka pocetak, Tacka kraj)
         {
