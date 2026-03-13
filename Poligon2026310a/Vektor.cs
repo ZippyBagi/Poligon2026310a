@@ -37,7 +37,14 @@ namespace Poligon2026310a
 
             return a.x * b.x + a.y * b.y;
         }
+        
+        public double VektorskiProizvod(Vektor prvi, Vektor drugi)
+        {
+            Tacka a = prvi.Centriraj();
+            Tacka b = drugi.Centriraj();
 
+            return a.x * b.y - a.y * b.x;
+        }
     }
 
 }
