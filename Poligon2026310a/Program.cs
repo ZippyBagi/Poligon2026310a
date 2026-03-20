@@ -31,13 +31,22 @@ namespace Poligon2026310a
             */
 
             Tacka A = new Tacka(1,2);
-            Tacka B = new Tacka(3, 2);
-            Tacka C = new Tacka(2, 3);
+            Tacka B = new Tacka(3,2);
+            Tacka C = new Tacka(2,3);
             Tacka D = new Tacka(2,2);
 
             Vektor AB = new Vektor(A, B);
 
             Console.WriteLine(Ravna.SaIsteStrane(AB, C, D));
+
+            Console.WriteLine("Koliko temena?");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Poligon prvi = new Poligon(n);
+            prvi.Unos();
+
+            Console.WriteLine();
+            prvi.Stampaj();
+
 
         }
     
