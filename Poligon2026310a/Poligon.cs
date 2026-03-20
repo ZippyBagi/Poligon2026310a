@@ -38,12 +38,23 @@ namespace Poligon2026310a
     
         public void Stampaj()
         {
-            Console.WriteLine("Koordinate temena su: ");
+            Console.WriteLine($"Poligon od {broj_temena} temena: ");
+            int i = 1;
             foreach(Tacka tacka in temena)
             {
-                Console.WriteLine($"{tacka.x} {tacka.y}");
+                Console.WriteLine($"A{i} ({tacka.x}, {tacka.y})");
+                i++;
             }
         }
     
+        public void Snimi()
+        {
+           
+        }
+
+        public void Ucitaj()
+        {
+
+        }
     }
 }
