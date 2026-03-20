@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Poligon2026310a
 {
@@ -49,11 +50,32 @@ namespace Poligon2026310a
     
         public void Snimi()
         {
-           
+            StreamWriter izlaz = new StreamWriter("podaci.txt");
+            izlaz.WriteLine(broj_temena);
+            foreach (Tacka tacka in temena)
+            {
+                izlaz.WriteLine($"{tacka.x}");
+                izlaz.WriteLine($"{tacka.y}");
+
+            }
+
+            izlaz.Close();
+
         }
 
-        public void Ucitaj()
+        public static Poligon Ucitaj()
         {
+            Poligon poligon = new Poligon(0);
+
+            StreamReader ulaz = new StreamReader("podaci.txt");
+            poligon.broj_temena = Convert.ToInt32(ulaz.ReadLine());
+            poligon.temena = new Tacka[poligon.broj_temena];
+            for (int i = 0; i < poligon.broj_temena; i++)
+            {
+                poligon.temena[i] = new Tacka(Convert.ToDouble(ulaz.ReadLine()), Convert.ToDouble(ulaz.ReadLine()));
+            }
+            ulaz.Close();
+            return poligon;
 
         }
     }

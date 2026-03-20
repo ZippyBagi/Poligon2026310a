@@ -8,6 +8,9 @@ namespace Poligon2026310a
 {
     internal class Program
     {
+
+        
+
         static void Main(string[] args)
         {
             //Dusan Kovacevic
@@ -39,14 +42,19 @@ namespace Poligon2026310a
 
             Console.WriteLine(Ravna.SaIsteStrane(AB, C, D));
 
+            /*
             Console.WriteLine("Koliko temena?");
             int n = Convert.ToInt32(Console.ReadLine());
             Poligon prvi = new Poligon(n);
             prvi.Unos();
-
             Console.WriteLine();
             prvi.Stampaj();
 
+            prvi.Snimi();
+            */
+
+            Poligon drugi = Poligon.Ucitaj();
+            drugi.Stampaj();
 
         }
     
