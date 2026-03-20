@@ -33,6 +33,7 @@ namespace Poligon2026310a
             Console.WriteLine(Vektor.VektorskiProizvod(OA, AC));
             */
 
+            /*
             Tacka A = new Tacka(1,2);
             Tacka B = new Tacka(3,2);
             Tacka C = new Tacka(2,3);
@@ -41,6 +42,7 @@ namespace Poligon2026310a
             Vektor AB = new Vektor(A, B);
 
             Console.WriteLine(Ravna.SaIsteStrane(AB, C, D));
+            */
 
             /*
             Console.WriteLine("Koliko temena?");
@@ -55,6 +57,8 @@ namespace Poligon2026310a
 
             Poligon drugi = Poligon.Ucitaj();
             drugi.Stampaj();
+
+            Console.WriteLine($"Obim je {drugi.Obim()}");
 
         }
     

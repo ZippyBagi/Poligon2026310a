@@ -45,6 +45,12 @@ namespace Poligon2026310a
 
             return a.x * b.y - a.y * b.x;
         }
+
+        public double duzina()
+        {
+            Tacka centar = Centriraj();
+            return centar.d();
+        }
     }
 
 }

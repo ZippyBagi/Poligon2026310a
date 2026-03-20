@@ -16,7 +16,7 @@ namespace Poligon2026310a
         {
             broj_temena = n;
             temena = new Tacka[n];
-            for(int i=0;i<n; i++)
+            for (int i = 0; i < n; i++)
             {
                 temena[i] = new Tacka();
             }
@@ -24,7 +24,7 @@ namespace Poligon2026310a
 
         public void Unos()
         {
-            for(int i = 0; i < broj_temena; i++)
+            for (int i = 0; i < broj_temena; i++)
             {
                 Console.WriteLine($"Uneti x i y koordinate od temena broj {i + 1}. U formatu: X Y");
 
@@ -36,18 +36,18 @@ namespace Poligon2026310a
                 temena[i].y = y;
             }
         }
-    
+
         public void Stampaj()
         {
             Console.WriteLine($"Poligon od {broj_temena} temena: ");
             int i = 1;
-            foreach(Tacka tacka in temena)
+            foreach (Tacka tacka in temena)
             {
                 Console.WriteLine($"A{i} ({tacka.x}, {tacka.y})");
                 i++;
             }
         }
-    
+
         public void Snimi()
         {
             StreamWriter izlaz = new StreamWriter("podaci.txt");
@@ -66,8 +66,8 @@ namespace Poligon2026310a
         public static Poligon Ucitaj()
         {
             Poligon poligon = new Poligon(0);
-
             StreamReader ulaz = new StreamReader("podaci.txt");
+
             poligon.broj_temena = Convert.ToInt32(ulaz.ReadLine());
             poligon.temena = new Tacka[poligon.broj_temena];
             for (int i = 0; i < poligon.broj_temena; i++)
@@ -77,6 +77,34 @@ namespace Poligon2026310a
             ulaz.Close();
             return poligon;
 
+        }
+
+        public static Vektor[] VratiStranice(Poligon a)
+        {
+            Vektor[] stranice = new Vektor[a.broj_temena];
+
+            for (int i = 0; i < a.broj_temena; i++)
+            {
+                int prvi = i;
+                int drugi = (i + 1) % a.broj_temena;
+
+                stranice[i] = new Vektor(a.temena[prvi], a.temena[drugi]);
+
+            }
+            return stranice;
+
+        }
+
+        public double Obim()
+        {
+            Vektor[] stranice = VratiStranice(this);
+            double O = 0;
+            for (int i = 0; i < broj_temena; i++)
+            {
+                O += stranice[i].duzina();
+
+            }
+            return O;
         }
     }
 }
