@@ -55,10 +55,15 @@ namespace Poligon2026310a
             prvi.Snimi();
             */
 
+            
             Poligon drugi = Poligon.Ucitaj();
+            
             drugi.Stampaj();
-
             Console.WriteLine($"Obim je {drugi.Obim()}");
+
+            Vektor[] stranice = Poligon.VratiStranice(drugi);    
+
+            Console.WriteLine(Vektor.daLiSeVektoriSeku(stranice[0], stranice[2]));
 
         }
     

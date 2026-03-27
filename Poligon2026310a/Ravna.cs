@@ -21,17 +21,15 @@ namespace Poligon2026310a
 
             if(levi == 0 || desni == 0)
             {
-                return 1;
+                return 1; //kolinearne
             }
 
             if((levi  > 0 && desni > 0) || (levi < 0 && desni < 0))
             {
-                return 0;
+                return 0; // sa iste strane
             }
 
-            return -1;
-
-
+            return -1; // sa razlicitih strana
         }
 
 

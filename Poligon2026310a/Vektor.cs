@@ -51,6 +51,15 @@ namespace Poligon2026310a
             Tacka centar = Centriraj();
             return centar.d();
         }
+
+        public static bool daLiSeVektoriSeku(Vektor a, Vektor b)
+        {
+
+            int a_b = Ravna.SaIsteStrane(a, b.pocetak, b.kraj);
+            int b_a = Ravna.SaIsteStrane(b, a.pocetak, b.kraj);
+
+            return ((a_b * b_a) != 0 );
+        }
     }
 
 }
