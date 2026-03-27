@@ -134,7 +134,6 @@ namespace Poligon2026310a
 
                     if(Vektor.daLiSeVektoriSeku(stranice[i], stranice[j]))
                     {
-                        Console.WriteLine("ne");
                         return false;
                     }
 
