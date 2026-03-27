@@ -32,5 +32,10 @@ namespace Poligon2026310a
             double ugaoStepeni = ugao * 180 / Math.PI;
             return ugaoStepeni;
         }
+
+        public static bool jednake(Tacka a , Tacka b)
+        {
+            return ((a.x == b.x) && (a.y == b.y));
+        }
     }
 }

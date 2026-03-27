@@ -61,9 +61,27 @@ namespace Poligon2026310a
             drugi.Stampaj();
             Console.WriteLine($"Obim je {drugi.Obim()}");
 
+            /*
             Vektor[] stranice = Poligon.VratiStranice(drugi);    
 
             Console.WriteLine(Vektor.daLiSeVektoriSeku(stranice[0], stranice[2]));
+            Console.WriteLine(Vektor.daLiSeVektoriSeku(stranice[1], stranice[3]));
+            */
+
+            Console.WriteLine(drugi.prost());
+
+            Poligon treci = new Poligon(6);
+            /*
+            0 0
+            1 1 
+            2 0
+            2 2 
+            1 1
+            0 2
+            */
+            treci.Unos();
+
+            Console.WriteLine(treci.prost());
 
         }
     
