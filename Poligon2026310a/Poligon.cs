@@ -122,7 +122,7 @@ namespace Poligon2026310a
                     }
                 }
             }
-
+            
             for(int i = 0; i < stranice.Length-2; i++)
             {
                 for(int j =i+2; j < stranice.Length; j++)
@@ -134,6 +134,7 @@ namespace Poligon2026310a
 
                     if(Vektor.daLiSeVektoriSeku(stranice[i], stranice[j]))
                     {
+                        Console.WriteLine(i + " " + j);
                         return false;
                     }
 

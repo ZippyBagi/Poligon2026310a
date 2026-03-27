@@ -56,10 +56,10 @@ namespace Poligon2026310a
             */
 
             
-            Poligon drugi = Poligon.Ucitaj();
+            //Poligon drugi = Poligon.Ucitaj();
             
-            drugi.Stampaj();
-            Console.WriteLine($"Obim je {drugi.Obim()}");
+            //drugi.Stampaj();
+            //Console.WriteLine($"Obim je {drugi.Obim()}");
 
             /*
             Vektor[] stranice = Poligon.VratiStranice(drugi);    
@@ -68,19 +68,20 @@ namespace Poligon2026310a
             Console.WriteLine(Vektor.daLiSeVektoriSeku(stranice[1], stranice[3]));
             */
 
-            Console.WriteLine(drugi.prost());
+            //Console.WriteLine(drugi.prost());
 
-            Poligon treci = new Poligon(6);
+            //Poligon treci = new Poligon(6);
             /*
             0 0
-            1 1 
+            1 0.5  
             2 0
             2 2 
             1 1
             0 2
             */
-            treci.Unos();
-
+            //treci.Unos();
+            //treci.Snimi();
+            Poligon treci = Poligon.Ucitaj();
             Console.WriteLine(treci.prost());
 
         }

@@ -56,8 +56,9 @@ namespace Poligon2026310a
         {
 
             int a_b = Ravna.SaIsteStrane(a, b.pocetak, b.kraj);
-            int b_a = Ravna.SaIsteStrane(b, a.pocetak, b.kraj);
-
+            int b_a = Ravna.SaIsteStrane(b, a.pocetak, a.kraj);
+            Console.WriteLine(a_b + " " + b_a);
+            Console.WriteLine(((a_b * b_a) != 0));
             return ((a_b * b_a) != 0 );
         }
     }
