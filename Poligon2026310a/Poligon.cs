@@ -169,7 +169,15 @@ namespace Poligon2026310a
         {
             double P = 0;
 
-            return P;
+            for(int i = 0; i < broj_temena; i++)
+            {
+                int prvi = i;
+                int drugi = (i + 1) % broj_temena;
+
+                P += temena[prvi].x * temena[drugi].y - temena[drugi].x * temena[prvi].y;
+            }
+
+            return P/2;
         }
     }
 }

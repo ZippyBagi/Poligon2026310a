@@ -49,7 +49,7 @@ namespace Poligon2026310a
             Poligon prvi = Poligon.Ucitaj();
             
 
-            Console.WriteLine(prvi.Konveksan());
+            Console.WriteLine(prvi.Povrsina());
             
 
 
