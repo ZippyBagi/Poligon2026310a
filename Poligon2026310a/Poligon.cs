@@ -106,35 +106,34 @@ namespace Poligon2026310a
             }
             return O;
         }
-        
+
         public bool prost()
         {
 
             Vektor[] stranice = VratiStranice(this);
 
-            for(int i =0; i < broj_temena-1; i++)
+            for (int i = 0; i < broj_temena - 1; i++)
             {
-                for(int j = i + 1; j < broj_temena; j++)
+                for (int j = i + 1; j < broj_temena; j++)
                 {
-                    if(Tacka.jednake(temena[i], temena[j]))
+                    if (Tacka.jednake(temena[i], temena[j]))
                     {
                         return false;
                     }
                 }
             }
-            
-            for(int i = 0; i < stranice.Length-2; i++)
+
+            for (int i = 0; i < stranice.Length - 2; i++)
             {
-                for(int j =i+2; j < stranice.Length; j++)
+                for (int j = i + 2; j < stranice.Length; j++)
                 {
-                    if(i ==0 && j == stranice.Length-1)
+                    if (i == 0 && j == stranice.Length - 1)
                     {
                         continue;
                     }
 
-                    if(Vektor.daLiSeVektoriSeku(stranice[i], stranice[j]))
+                    if (Vektor.daLiSeVektoriSeku(stranice[i], stranice[j]))
                     {
-                        Console.WriteLine(i + " " + j);
                         return false;
                     }
 
@@ -143,6 +142,34 @@ namespace Poligon2026310a
 
             return true;
         }
-        
+
+        public bool Konveksan()
+        {
+            int plusevi = 0;
+
+            for (int i = 0; i < broj_temena; i++)
+            {
+                Tacka prva = temena[i];
+                Tacka druga = temena[(i + 1) % broj_temena];
+                Tacka treca = temena[(i + 2) % broj_temena];
+
+                Vektor prvi_vektor = new Vektor(prva, druga);
+                Vektor drugi_vektor = new Vektor(druga, treca);
+
+                if (Vektor.VektorskiProizvod(prvi_vektor, drugi_vektor) > 0) plusevi++;
+            }
+            if (plusevi == broj_temena | plusevi == 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public double Povrsina()
+        {
+            double P = 0;
+
+            return P;
+        }
     }
 }

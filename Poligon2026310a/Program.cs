@@ -44,20 +44,17 @@ namespace Poligon2026310a
             Console.WriteLine(Ravna.SaIsteStrane(AB, C, D));
             */
 
-            /*
-            Console.WriteLine("Koliko temena?");
-            int n = Convert.ToInt32(Console.ReadLine());
-            Poligon prvi = new Poligon(n);
-            prvi.Unos();
-            Console.WriteLine();
-            prvi.Stampaj();
-
-            prvi.Snimi();
-            */
-
             
+           
+            Poligon prvi = Poligon.Ucitaj();
+            
+
+            Console.WriteLine(prvi.Konveksan());
+            
+
+
             //Poligon drugi = Poligon.Ucitaj();
-            
+
             //drugi.Stampaj();
             //Console.WriteLine($"Obim je {drugi.Obim()}");
 
@@ -81,8 +78,10 @@ namespace Poligon2026310a
             */
             //treci.Unos();
             //treci.Snimi();
-            Poligon treci = Poligon.Ucitaj();
-            Console.WriteLine(treci.prost());
+            //Poligon treci = Poligon.Ucitaj();
+
+           
+
 
         }
     
